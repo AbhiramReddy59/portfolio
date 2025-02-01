@@ -204,3 +204,43 @@ document.addEventListener('click', function(e) {
         enableScroll();
     }
 });
+
+//contact form
+document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form');
+    
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        
+        // Get form values
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        try {
+            // Update the URL to point to your Node.js server
+            const response = await fetch('http://localhost:3000/submit', {  // Changed this line
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ name, email, message })
+            });
+
+            // Handle response
+            const result = await response.json();
+
+            if (response.ok) {
+                // Success message
+                alert('Message sent successfully!');
+                form.reset(); // Clear form
+            } else {
+                // Error handling
+                alert(`Error: ${result.message}`);
+            }
+        } catch (error) {
+            console.error('Submission error:', error);
+            alert('Failed to send message. Please try again.');
+        }
+    });
+});

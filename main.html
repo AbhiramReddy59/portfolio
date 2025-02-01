@@ -33,7 +33,8 @@
             <div class="nav-toggle"><i class="fas fa-bars"></i></div>
         </div>
         <div class="nav-menu">
-            <a href="img/abhi_cv.pdf" class="resume-button" download>Download Resume</a>
+            <a href="img/abhiramreddy_enukonda_SDE1.pdf" class="resume-button" download target="_blank">Download Resume</a>
+
             <div id="dark-mode-toggle" class="dark-mode-toggle">
                 <i class="fas fa-moon"></i>
             </div>
@@ -42,7 +43,7 @@
 <center>
     <header>
         <img src="ABHI.webp" alt="Abhi pic">
-        <h1>Hello, I am ABHI, a <span class="about-me"></span></h1>
+        <h1>Hello, I am Abhiram Reddy, a <span class="about-me"></span></h1>
        
             <p>Passionate about bridging technology and user needs, I am a full-stack web developer with a robust foundation in computer science and a zeal for continuous learning. Specializing in creating seamless, intuitive digital experiences, my expertise spans front-end and back-end development, including technologies like JavaScript, React, and Node.js. I thrive on problem-solving and innovation, aiming to contribute to projects that push technological boundaries. Eager to collaborate with like-minded teams, I am on a quest to develop impactful web solutions that drive success and foster growth.</p> <p>Welcome to My World!</p>
     </header>
@@ -76,6 +77,10 @@
             <img src="icon/8.png" alt="Icon 8">
             <img src="icon/9.webp" alt="Icon 9">
             <img src="icon/10.png" alt="Icon 10">
+            <img src="icon/11.png" alt="Icon 11">
+            <img src="icon/12.png" alt="Icon 12">
+            <img src="icon/13.png" alt="Icon 12">
+
         </div>
     </section>
 
@@ -94,6 +99,18 @@
             <p>CSS</p>
             <div class="progress-bar" data-progress="60"></div>
         </div>
+        <div class="skill">
+            <p>Java</p>
+            <div class="progress-bar" data-progress="80"></div>
+        </div>
+        <div class="skill">
+            <p>C</p>
+            <div class="progress-bar" data-progress="70"></div>
+        </div>
+        <div class="skill">
+            <p>C++</p>
+            <div class="progress-bar" data-progress="70"></div>
+        </div>
     </section>
     <hr>    
     <section>
@@ -102,54 +119,112 @@
                 <section id="projects">
                     <div class="project-thumbnail">
                         <div class="thumbnail-content">
-                            <img src="img/1.png" alt="Project 1">
-                            <h3>Project 1 Title</h3>
-                            <p>Description of Project 1</p>
+                            <img src="img/hate/1.png" alt="Project 1">
+                            <h3>NLP FOR INCLUSIVE DISCOURSE: DETECTING AND MITIGATING HATE SPEECH</h3>
+                            <p>Description of Project</p>
                             <a href="#" class="btn know-more" data-modal-target="#projectModal1">Know More</a>
                         </div>
                     </div>
                     <div class="project-thumbnail">
                         <div class="thumbnail-content">
-                            <img src="img/2.png" alt="Project 1">
-                            <h3>Project 1 Title</h3>
-                            <p>Description of Project 1</p>
+                            <img src="img/youtube/1.png" alt="Project 1">
+                            <h3>Smart Summarizer: AI-Enhanced Multi-Language Summaries for YouTube Videos</h3>
+                            <p>Description of Project</p>
                             <a href="#" class="btn know-more" data-modal-target="#projectModal2">Know More</a>
 
                         </div>
                     </div>
                     <div class="project-thumbnail">
                         <div class="thumbnail-content">
-                            <img src="img/3.png" alt="Project 1">
-                            <h3>Project 1 Title</h3>
-                            <p>Description of Project 1</p>
+                            <img src="img/load/1.png" alt="Project 1">
+                            <h3>Bidirectional Load Balancing Strategy in Kubernetes Cluster</h3>
+                            <p>Description of Project</p>
                             <a href="#" class="btn know-more" data-modal-target="#projectModal3">Know More</a>
                         </div>
-                    </div>                        
+                    </div>      
+                    <div style="display: flex; justify-content: center; align-items: center; margin-top: 30px; margin-bottom: 30px;">
+            <a href="https://github.com/AbhiramReddy59" target="_blank" 
+                style="padding: 15px 30px; background: linear-gradient(45deg, #6a11cb, #2575fc); color: white; font-size: 20px; font-weight: bold; border-radius: 10px; text-decoration: none; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); transition: background 0.3s, transform 0.3s;">
+                Check My GitHub Profile and Projects
+            </a>
+        </div>
+    </section>
+</section>
+
+<script>
+    document.querySelector("a").addEventListener("mouseover", function() {
+        this.style.background = "linear-gradient(45deg, #2575fc, #6a11cb)";
+        this.style.transform = "scale(1.1)";
+    });
+
+    document.querySelector("a").addEventListener("mouseout", function() {
+        this.style.background = "linear-gradient(45deg, #6a11cb, #2575fc)";
+        this.style.transform = "scale(1)";
+    });
+</script>
+                
             
     </section>
 </section>
 
     <hr>
     <section>
-        <h2>Contact Me</h2>
-        <form>
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" placeholder="Your Name">
-            </div>
+       <h2>Contact Me</h2>
+<form id="contact-form">
+    <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+    </div>
+
+    <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+    </div>
+
+    <button type="submit">Send Message</button>                
+</form>
+
+<!-- Add this script tag at the end of your body tag -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('contact-form');
+        
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
             
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Your Email">
-            </div>
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value
+            };
     
-            <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" placeholder="Your Message"></textarea>
-            </div>
+            try {
+                const response = await fetch('http://localhost:3000/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData)
+                });
     
-            <button type="submit">Send Message</button>                
-        </form>
+                const result = await response.json();
+                alert(result.message);
+                
+                if (response.ok) {
+                    form.reset();
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Failed to send message. Please try again.');
+            }
+        });
+    });
+    </script>
     </section>
     <hr>
     <section>
@@ -167,20 +242,20 @@
         <div id="projectModal1" class="modal" style="display: none;">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <h2>Project Title 1</h2>
+                <h2>NLP FOR INCLUSIVE DISCOURSE: DETECTING AND MITIGATING HATE SPEECH</h2>
                 <hr>
                 <div class="modal-body">
                     <div class="modal-row">
                         <div class="column description">
-                            <p>Short Project Overview: This project is a comprehensive exploration...</p>
-                            <a href="https://github.com/yourgithubrepo" target="_blank" class="github-link"><i class="fab fa-github"></i></a>
+                            <p>I developed a Python-based system to classify text as hate speech or non-hate speech using machine learning techniques. The project involved preprocessing text (tokenization, stop word removal, stemming), extracting features with TF-IDF, and experimenting with classifiers like logistic regression and neural networks. The system accepts real-time user input and demonstrates high accuracy in identifying harmful language, contributing to safer online platforms. Future work includes enhancing generalizability across datasets and languages.</p>
+                            <a href="https://github.com/AbhiramReddy59/hate_detection" target="_blank" class="github-link"><i class="fab fa-github"></i></a>
                         </div>
                         <div class="column image-carousel">
                             <div class="carousel-container">
                                 <div class="carousel-slide">
-                                    <img src="img/1.png" alt="Project Image 1">
-                                    <img src="img/2.png" alt="Project Image 2">
-                                    <img src="img/3.png" alt="Project Image 3">
+                                    <img src="img/hate/1.png" alt="Project Image 1">
+                                    <img src="img/hate/2.png" alt="Project Image 2">
+                                    <img src="img/hate/3.png" alt="Project Image 3">
                                 </div>
                                 <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
                                 <a class="next" onclick="moveSlide(1)">&#10095;</a>
@@ -191,14 +266,20 @@
                         <div class="column">
                             <h3>Project Details</h3>
                             <ul>
-                                <li>Utilizes ROS for managing robot software components.</li>
-                                <li>Incorporates machine learning for traffic sign recognition.</li>
-                                <li>Features real-time obstacle detection using LIDAR.</li>
+                                <li>Utilizes Python and machine learning for text classification.</li>
+                                <li>Implements text preprocessing steps, including tokenization, stop word removal, and stemming.</li>
+                                <li>Employs TF-IDF for feature extraction to convert text into numerical representations.</li>
+                                <li>Experiments with classifiers like logistic regression, support vector machines, and neural networks.</li>
+                                <li>Features a console-based interface for real-time hate speech detection.</li>
+                                <li>Achieves high accuracy in identifying harmful language.</li>
+                                <li>Contributes to safer digital spaces through automated content moderation.</li>
                             </ul>
                         </div>
                         <div class="column">
                             <h3>Project Video</h3>
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/yourvideoid" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/watch?v=M8R27oyRIyg&ab_channel=ENUKONDA.ABHIRAMREDDY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <a href="https://www.youtube.com/watch?v=M8R27oyRIyg" target="_blank">Watch on YouTube</a>
+
                         </div>
                     </div>
                 </div>
@@ -210,20 +291,26 @@
         <div id="projectModal2" class="modal" style="display: none;">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <h2>Project Title 2</h2>
+                <h2>Smart Summarizer: AI-Enhanced Multi-Language Summaries for YouTube Videos </h2>
                 <hr>
                 <div class="modal-body">
                     <div class="modal-row">
                         <div class="column description">
-                            <p>Short Project Overview: This project is a comprehensive exploration...</p>
-                            <a href="https://github.com/yourgithubrepo" target="_blank" class="github-link"><i class="fab fa-github"></i></a>
+                            <p>The Smart Summarizer application uses cutting-edge AI models to generate structured, multi-language summaries for YouTube videos. It efficiently retrieves or transcribes video content using Groq's Whisper for transcription and Llama 3.1 for summarization, supporting over 12 languages. Key features include:
+
+                                Transcript Retrieval: Extracts YouTube transcripts or transcribes audio using Whisper with FFmpeg for audio processing.
+                                Advanced Summarization: Employs Langchain for text chunking to organize summaries into sections like Title, Overview, Key Points, and Context.
+                                Streamlit Interface: Intuitive UI for real-time input, language selection, and progress tracking.
+                                Technical Robustness: Incorporates yt-dlp for video processing, authentication cookies for private videos, and robust error handling.</p>
+                            <a href="https://github.com/AbhiramReddy59/youtube_summarizer" target="_blank" class="github-link"><i class="fab fa-github"></i></a>
                         </div>
                         <div class="column image-carousel">
                             <div class="carousel-container">
                                 <div class="carousel-slide">
-                                    <img src="img/1.png" alt="Project Image 4">
-                                    <img src="img/1.png" alt="Project Image 5">
-                                    <img src="img/1.png" alt="Project Image 6">
+                                    <img src="img/youtube/1.png" alt="Project Image">
+                                    <img src="img/youtube/2.png" alt="Project Image">
+                                    <img src="img/youtube/3.png" alt="Project Image">
+                                    <img src="img/youtube/4.png" alt="Project Image">
                                 </div>
                                 <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
                                 <a class="next" onclick="moveSlide(1)">&#10095;</a>
@@ -234,10 +321,15 @@
                         <div class="column">
                             <h3>Project Details</h3>
                             <ul>
-                                <li>Utilizes ROS for managing robot software components.</li>
-                                <li>Incorporates machine learning for traffic sign recognition.</li>
-                                <li>Features real-time obstacle detection using LIDAR.</li>
+                                <li>Leverages Groq's Whisper for high-accuracy video transcription and FFmpeg for audio processing.</li>
+                                <li>Uses Llama 3.1 for nuanced, multi-language summaries supporting over 12 languages.</li>
+                                <li>Implements Langchain for advanced text chunking, organizing summaries into structured sections.</li>
+                                <li>Features an intuitive Streamlit interface for real-time YouTube URL input and summary generation.</li>
+                                <li>Integrates yt-dlp for reliable video processing and authentication cookies for private video access.</li>
+                                <li>Includes robust error handling for invalid URLs, transcript issues, and API errors.</li>
+                                <li>Automates temporary file cleanup to optimize system resource usage.</li>
                             </ul>
+                            
                         </div>
                         <div class="column">
                             <h3>Project Video</h3>
@@ -252,20 +344,22 @@
         <div id="projectModal3" class="modal" style="display: none;">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <h2>Project Title 3</h2>
+                <h2>Bidirectional Load Balancing Strategy in Kubernetes Cluster</h2>
                 <hr>
                 <div class="modal-body">
                     <div class="modal-row">
                         <div class="column description">
-                            <p>Short Project Overview: This project is a comprehensive exploration...</p>
-                            <a href="https://github.com/yourgithubrepo" target="_blank" class="github-link"><i class="fab fa-github"></i></a>
+                            <p>This project implements a bidirectional load balancing strategy in a Kubernetes cluster, optimizing traffic distribution across microservices. Leveraging Kubernetes' Ingress controllers and service discovery, the system ensures high availability and scalability. A custom Python script facilitates round-robin load balancing and enables seamless bidirectional communication between clients and services, improving system reliability and fault tolerance.                            </p>
+                            <a href="https://github.com/AbhiramReddy59/mini_project" target="_blank" class="github-link"><i class="fab fa-github"></i></a>
                         </div>
                         <div class="column image-carousel">
                             <div class="carousel-container">
                                 <div class="carousel-slide">
-                                    <img src="img/3.png" alt="Project Image 7">
-                                    <img src="img/2.png" alt="Project Image 8">
-                                    <img src="img/1.png" alt="Project Image 9">
+                                    <img src="img/load/1.png" alt="Project Image">
+                                    <img src="img/load/2.png" alt="Project Image">
+                                    <img src="img/load/3.png" alt="Project Image">
+                                    <img src="img/load/4.png" alt="Project Image">
+                                    <img src="img/load/5.png" alt="Project Image">
                                 </div>
                                 <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
                                 <a class="next" onclick="moveSlide(1)">&#10095;</a>
@@ -276,10 +370,14 @@
                         <div class="column">
                             <h3>Project Details</h3>
                             <ul>
-                                <li>Utilizes ROS for managing robot software components.</li>
-                                <li>Incorporates machine learning for traffic sign recognition.</li>
-                                <li>Features real-time obstacle detection using LIDAR.</li>
+                                <li>Leverages Kubernetes' Ingress controllers and service discovery for dynamic traffic management.</li>
+                                <li>Implements a custom Python script to enforce a perfect round-robin load balancing pattern.</li>
+                                <li>Optimizes resource usage to prevent pod exhaustion and enhance fault tolerance.</li>
+                                <li>Supports bidirectional communication for seamless data flow between clients and services.</li>
+                                <li>Enhances scalability and resilience for high-traffic microservices-based applications.</li>
+                                <li>Demonstrates Kubernetes' effectiveness in managing distributed systems in production environments.</li>
                             </ul>
+                            
                         </div>
                         <div class="column">
                             <h3>Project Video</h3>
@@ -290,6 +388,8 @@
                 </div>
             </div>
         </div>  
+        
+
 
     </body>
 </html>
